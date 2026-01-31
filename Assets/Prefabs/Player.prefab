@@ -5012,7 +5012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f1fe7d85b7bb5f4a895c51983367665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
-  fireExtinguisherThrust: 5000
+  fireExtinguisherThrust: 50
   fireExtinguisherDuration: 3
   stationaryCount: 5
   stationaryVelocity: 30

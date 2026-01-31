@@ -109,20 +109,19 @@ public class Player : MonoBehaviour
         if (useAction.IsPressed())
         {
             abilitiesScript.UseItem();
-            if (!foam.isPlaying && 
-                abilitiesScript.itemUsageRemaining > 0 &&
+            if (abilitiesScript.itemUsageRemaining > 0 &&
                 abilitiesScript.currentMask == Abilities.MASKS.FIRE_HELMET)
             {
                 foam.Play();
             }else
             {
-                foam.Pause();
+                foam.Stop();
             }
             
         }
         else
         {
-            foam.Pause();
+            foam.Stop();
         }
     }
 

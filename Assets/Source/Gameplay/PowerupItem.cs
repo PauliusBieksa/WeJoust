@@ -8,7 +8,7 @@ public class PowerupItem : MonoBehaviour
     
     void Start()
     {
-        int choice = Random.Range(0, 2);
+        int choice = Random.Range(0, 0);
         SpriteResolver sprite_resolver = GetComponentInChildren<SpriteResolver>();
         switch (choice)
         {
