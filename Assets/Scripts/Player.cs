@@ -100,7 +100,7 @@ public class Player : MonoBehaviour
             rb.AddTorque(torqueVal);
         }
 
-        if (useAction.triggered)
+        if (useAction.IsPressed())
         {
             abilitiesScript.UseItem();
         }

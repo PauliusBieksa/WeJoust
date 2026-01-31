@@ -602,6 +602,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3296504251780918567, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
+      propertyPath: spawnItem
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3702433861251253021, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
       propertyPath: m_Name
       value: Game Manager
@@ -784,6 +788,10 @@ PrefabInstance:
     - target: {fileID: 5141417083561017856, guid: 4ab058d1da4e7d44d86c0c7c0e2f685c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8017044659644343166, guid: 4ab058d1da4e7d44d86c0c7c0e2f685c, type: 3}
+      propertyPath: fireExtinguisherThrust
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
