@@ -26,7 +26,6 @@ public class Player : MonoBehaviour
     {
         Vector2 moveValue = moveAction.ReadValue<Vector2>();
         Vector2 lookValue = lookAction.ReadValue<Vector2>();
-        Debug.Log(lookValue);
 
         rb.AddForce(moveValue * moveSpeed);
 

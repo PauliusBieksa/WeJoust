@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06a0373d041628643be6bf093ba750d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  MaskPrefab: {fileID: 7283201436159891637, guid: cde46bd19db6a8245ae789bb88215f02, type: 3}
+  spawnItem: 0
 --- !u!114 &9178249089299123299
 MonoBehaviour:
   m_ObjectHideFlags: 0
