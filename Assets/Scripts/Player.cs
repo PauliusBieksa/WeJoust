@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
         
         if(currentHealth <= 0)
         { 
-            PlayerLobbyManager.UnregisterPlayerEvent(this);
+            // /PlayerLobbyManager.UnregisterPlayerEvent(this);
             playerCard.ShowDead();
         }
     }

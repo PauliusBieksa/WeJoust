@@ -22,12 +22,13 @@ public class PlayerLobbyManager : MonoBehaviour
    private void RegisterPlayer(Player player)
    {
       Players.Add(player);
-      ActivatePlayerCard(Players.Count-1);
+      ActivatePlayerCard(Players.Count-1, player);
    }
 
-   private void ActivatePlayerCard(int index)
+   private void ActivatePlayerCard(int index, Player player)
    {
       playerCards[index].gameObject.SetActive(true);
+      player.playerCard = playerCards[index];
    }
 
 }
