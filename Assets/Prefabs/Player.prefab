@@ -106,6 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf3bae1047ada149b881014a9424156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
+  playerID: 0
   playerCard: {fileID: 0}
   chair: {fileID: 420799065356256342}
   moveSpeed: 8
@@ -163,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f1fe7d85b7bb5f4a895c51983367665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
-  fireExtinguisherThrust: 50
+  fireExtinguisherThrust: 5000
   fireExtinguisherDuration: 3
   stationaryCount: 5
   stationaryVelocity: 30
