@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   playerCard: {fileID: 0}
+  chair: {fileID: 420799065356256342}
   moveSpeed: 8
   rotattionSpeed: 10
   spritetBroomFacing: {x: -1, y: 0}

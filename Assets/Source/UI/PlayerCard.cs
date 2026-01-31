@@ -24,6 +24,7 @@ public class PlayerCard : MonoBehaviour
     public float HealthLossRate = 1.0f;
     public Sprite defaultItemSprite;
     public Sprite deadItemSprite;
+    public Image borderImage;
     
     [SerializeField]
     private float maxHealth = 1;
