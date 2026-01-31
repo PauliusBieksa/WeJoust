@@ -1,9 +1,13 @@
 using UnityEngine;
+using UnityEngine.U2D.Animation;
 
 public class Abilities : MonoBehaviour
 {
     Player playerScript;
     Rigidbody2D rb;
+
+    [SerializeField]
+    private SpriteResolver maskSpriteResolver;
 
     [SerializeField]
     float fireExtinguisherThrust = 50f;
@@ -44,7 +48,10 @@ public class Abilities : MonoBehaviour
     void Update()
     {
         if (currentMask != MASKS.NONE && itemUsageRemaining <= 0)
+        {
             currentMask = MASKS.NONE;
+            maskSpriteResolver.SetCategoryAndLabel("Masks", "None");
+        }
         if (cooldown > 0)
             cooldown -= Time.deltaTime;
     }
@@ -56,9 +63,11 @@ public class Abilities : MonoBehaviour
         {
             case MASKS.FIRE_HELMET:
                 itemUsageRemaining = fireExtinguisherDuration;
+                maskSpriteResolver.SetCategoryAndLabel("Masks", "FireExtinguisher");
                 break;
             case MASKS.STATIONARY:
                 itemUsageRemaining = stationaryCount - 0.000001f;
+                maskSpriteResolver.SetCategoryAndLabel("Masks", "Stationary");
                 break;
         }
     }
@@ -80,9 +89,7 @@ public class Abilities : MonoBehaviour
     private void useFireExtinguisher()
     {
         rb.AddForce(transform.rotation * playerScript.spritetBroomFacing * fireExtinguisherThrust);
-        
         itemUsageRemaining -= Time.deltaTime;
-        
     }
 
     private void useStationary()
