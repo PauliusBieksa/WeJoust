@@ -417,17 +417,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1978206857 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9197685130860620756, guid: cde46bd19db6a8245ae789bb88215f02, type: 3}
-  m_PrefabInstance: {fileID: 3685937481524437941}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 913343edb5fc0374ba33b0925479ca0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PowerupItem
 --- !u!114 &2090854738 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1345914464139981012, guid: fb4ba853cf1c5fa4188d8cdfb490950b, type: 3}
@@ -447,10 +436,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 754734198}
     m_Modifications:
-    - target: {fileID: 1732673208790648372, guid: 381b29881e70f1b40bada20cc24bce46, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2699083716823807741, guid: 381b29881e70f1b40bada20cc24bce46, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.15
@@ -494,14 +479,6 @@ PrefabInstance:
     - target: {fileID: 2878153719856378259, guid: 381b29881e70f1b40bada20cc24bce46, type: 3}
       propertyPath: m_Name
       value: PlayArea
-      objectReference: {fileID: 0}
-    - target: {fileID: 2878153719856378259, guid: 381b29881e70f1b40bada20cc24bce46, type: 3}
-      propertyPath: m_TagString
-      value: arena
-      objectReference: {fileID: 0}
-    - target: {fileID: 4396129244375941339, guid: 381b29881e70f1b40bada20cc24bce46, type: 3}
-      propertyPath: m_FlipX
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -657,14 +634,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameplayCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 4371746707768518503, guid: fb4ba853cf1c5fa4188d8cdfb490950b, type: 3}
-      propertyPath: powerUp
-      value: 
-      objectReference: {fileID: 1978206857}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 5671475350871636515, guid: fb4ba853cf1c5fa4188d8cdfb490950b, type: 3}
-    - {fileID: 8979974206462150795, guid: fb4ba853cf1c5fa4188d8cdfb490950b, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb4ba853cf1c5fa4188d8cdfb490950b, type: 3}
