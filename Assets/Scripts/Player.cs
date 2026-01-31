@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public Vector2 spritetBroomFacing = new Vector2(-1, 0);
     public float extraRotationDamping = 10f; 
     public float HealthLossRate = 1.0f;
+    public SpriteRenderer wheels;
     
     InputAction moveAction;
     InputAction lookAction;
@@ -90,6 +91,8 @@ public class Player : MonoBehaviour
             rb.angularDamping = extraRotationDamping * (1f + facingDotProd);
             rb.AddTorque(torqueVal);
         }
+        
+        wheels.transform.localRotation = Quaternion.Euler(0, 0, -gameObject.transform.rotation.eulerAngles.z);
     }
 
     private void EvaluateHealth()
