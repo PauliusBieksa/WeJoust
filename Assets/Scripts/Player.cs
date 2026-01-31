@@ -1,4 +1,5 @@
 using System.Runtime.InteropServices;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,6 +16,7 @@ public class Player : MonoBehaviour
     
     InputAction moveAction;
     InputAction lookAction;
+    InputAction attackAction;
     Rigidbody2D rb;
     
     private bool losingHealth = false;
@@ -22,13 +24,18 @@ public class Player : MonoBehaviour
     private float maxHealth = 1;
     private float currentHealth = 1;
 
+    private Vector2 moveValue;
+    private Vector2 lookValue;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        
         PlayerLobbyManager.RegisterPlayerEvent(this);
         
-        moveAction = InputSystem.actions.FindAction("Move");
-        lookAction = InputSystem.actions.FindAction("Look");
+        moveAction = GetComponent<PlayerInput>().actions.FindAction("Move");
+        lookAction = GetComponent<PlayerInput>().actions.FindAction("Look");
+        attackAction = GetComponent<PlayerInput>().actions.FindAction("Jump");
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -57,13 +64,17 @@ public class Player : MonoBehaviour
             EvaluateHealth();
         }
         
-        Vector2 moveValue = moveAction.ReadValue<Vector2>();
-        Vector2 lookValue = lookAction.ReadValue<Vector2>();
+        moveValue = moveAction.ReadValue<Vector2>();
+        lookValue = lookAction.ReadValue<Vector2>();
+        
+        if(moveValue.sqrMagnitude > 0)
+            Debug.Log($"look value: {moveValue}");
 
         rb.AddForce(moveValue * moveSpeed);
 
         if (lookValue.sqrMagnitude > 0)
         {
+            Debug.Log($"look value: {lookValue}");
             Vector2 currentFacing = transform.rotation * spritetBroomFacing;
             float torqueVal = rotattionSpeed;
             bool leftOfFacing = Vector3.Cross(new Vector3(currentFacing.x, currentFacing.y, 0f), new Vector3(lookValue.x, lookValue.y, 0f)).z > 0;
@@ -91,6 +102,7 @@ public class Player : MonoBehaviour
         { 
             // /PlayerLobbyManager.UnregisterPlayerEvent(this);
             playerCard.ShowDead();
+            Destroy(this.gameObject);
         }
     }
 }
