@@ -79,7 +79,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDamping: 0
   m_AngularDamping: 0.3
   m_GravityScale: 0
@@ -108,11 +108,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player
   playerCard: {fileID: 0}
   moveSpeed: 8
-  rotattionSpeed: 30
+  rotattionSpeed: 10
   spritetBroomFacing: {x: -1, y: 0}
-  extraRotationDamping: 30
+  extraRotationDamping: 4
   HealthLossRate: 1
-  wheels: {fileID: 5408877716947487890}
   maxHealth: 1
 --- !u!70 &2047551467332050619
 CapsuleCollider2D:

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - arena
   - ItemSpawnPoint
+  - Item
   layers:
   - Default
   - TransparentFX
