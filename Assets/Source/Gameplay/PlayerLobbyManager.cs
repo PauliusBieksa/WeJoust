@@ -8,6 +8,8 @@ public class PlayerLobbyManager : MonoBehaviour
    public List<PlayerCard> playerCards = new List<PlayerCard>();
    public static Action<Player> RegisterPlayerEvent;
    public static Action<Player> UnregisterPlayerEvent;
+   
+   private int joinedPLayerCount = 0;
 
    private void OnEnable()
    {
@@ -21,8 +23,16 @@ public class PlayerLobbyManager : MonoBehaviour
 
    private void RegisterPlayer(Player player)
    {
-      Players.Add(player);
-      ActivatePlayerCard(Players.Count-1, player);
+      if(joinedPLayerCount < 4)
+      {
+         Players.Add(player);
+         ActivatePlayerCard(Players.Count - 1, player);
+         joinedPLayerCount++;
+      }
+      else
+      {
+         Destroy(player.gameObject);
+      }
    }
 
    private void ActivatePlayerCard(int index, Player player)
