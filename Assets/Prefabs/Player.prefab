@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1233254162932028075}
   - component: {fileID: 6480630680335841245}
   - component: {fileID: 2047551467332050619}
-  - component: {fileID: 470690248934611938}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -79,7 +78,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.3
   m_GravityScale: 0
@@ -107,10 +106,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   playerCard: {fileID: 0}
-  moveSpeed: 8
-  rotattionSpeed: 30
+  moveSpeed: 5
+  rotattionSpeed: 20
   spritetBroomFacing: {x: -1, y: 0}
-  extraRotationDamping: 30
+  extraRotationDamping: 10
   HealthLossRate: 1
   wheels: {fileID: 5408877716947487890}
   maxHealth: 1
@@ -151,24 +150,6 @@ CapsuleCollider2D:
   m_Offset: {x: 1.4813471, y: 0.117922656}
   m_Size: {x: 5.7931337, y: 2.950788}
   m_Direction: 1
---- !u!114 &470690248934611938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1773366782566994172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f1fe7d85b7bb5f4a895c51983367665, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Abilities
-  fireExtinguisherThrust: 50
-  fireExtinguisherDuration: 3
-  stationaryCount: 5
-  stationaryVelocity: 30
-  stationaryMass: 10
-  currentMask: 2
 --- !u!1 &2079650819483735061
 GameObject:
   m_ObjectHideFlags: 0

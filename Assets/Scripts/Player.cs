@@ -28,8 +28,6 @@ public class Player : MonoBehaviour
     private Vector2 moveValue;
     private Vector2 lookValue;
 
-    private Abilities abilitiesScript;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -40,8 +38,6 @@ public class Player : MonoBehaviour
         lookAction = GetComponent<PlayerInput>().actions.FindAction("Look");
         attackAction = GetComponent<PlayerInput>().actions.FindAction("Jump");
         rb = GetComponent<Rigidbody2D>();
-
-        abilitiesScript = GetComponent<Abilities>();
     }
 
 
@@ -59,14 +55,6 @@ public class Player : MonoBehaviour
         {
             losingHealth = false;
         }
-        else if (other.gameObject.tag == "Item")
-        {
-            if (abilitiesScript.currentMask == Abilities.MASKS.NONE)
-            {
-                abilitiesScript.equipMask(other.GetComponent<PowerupItem>().Mask);
-                Destroy(other.gameObject);
-            }
-        }
     }
 
     // Update is called once per frame
@@ -80,10 +68,14 @@ public class Player : MonoBehaviour
         moveValue = moveAction.ReadValue<Vector2>();
         lookValue = lookAction.ReadValue<Vector2>();
         
+        if(moveValue.sqrMagnitude > 0)
+            Debug.Log($"look value: {moveValue}");
+
         rb.AddForce(moveValue * moveSpeed);
 
         if (lookValue.sqrMagnitude > 0)
         {
+            Debug.Log($"look value: {lookValue}");
             Vector2 currentFacing = transform.rotation * spritetBroomFacing;
             float torqueVal = rotattionSpeed;
             bool leftOfFacing = Vector3.Cross(new Vector3(currentFacing.x, currentFacing.y, 0f), new Vector3(lookValue.x, lookValue.y, 0f)).z > 0;
