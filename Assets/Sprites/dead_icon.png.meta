@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 06864d09b36e4d143904f8cbb47b8588
+guid: a12b959e11a062046aa9ed8b71e55280
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1227320109327260225
-    second: mask_fire_extinguisher_0
+      213: -9181194562420095409
+    second: dead_icon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mask_fire_extinguisher_0
+      name: dead_icon_0
       rect:
         serializedVersion: 2
-        x: 82
-        y: 7
-        width: 553
-        height: 759
+        x: 0
+        y: 0
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fb5ead9fcdea7fee0800000000000000
-      internalID: -1227320109327260225
+      spriteID: f46c3358038d59080800000000000000
+      internalID: -9181194562420095409
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      mask_fire_extinguisher_0: -1227320109327260225
+      dead_icon_0: -9181194562420095409
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

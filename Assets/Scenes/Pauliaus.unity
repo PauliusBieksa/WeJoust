@@ -604,7 +604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3296504251780918567, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
       propertyPath: spawnItem
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3702433861251253021, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
       propertyPath: m_Name
@@ -626,6 +626,10 @@ PrefabInstance:
     - target: {fileID: 1773366782566994172, guid: 4ab058d1da4e7d44d86c0c7c0e2f685c, type: 3}
       propertyPath: m_Name
       value: dummy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4491140638485973715, guid: 4ab058d1da4e7d44d86c0c7c0e2f685c, type: 3}
+      propertyPath: m_labelHash
+      value: 6.890074e-20
       objectReference: {fileID: 0}
     - target: {fileID: 5141417083561017856, guid: 4ab058d1da4e7d44d86c0c7c0e2f685c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -680,6 +684,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ab058d1da4e7d44d86c0c7c0e2f685c, type: 3}
+--- !u!114 &1939284440 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4491140638485973715, guid: 4ab058d1da4e7d44d86c0c7c0e2f685c, type: 3}
+  m_PrefabInstance: {fileID: 7915140088048808704}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
 --- !u!1001 &4764036047267398330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -790,9 +805,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8017044659644343166, guid: 4ab058d1da4e7d44d86c0c7c0e2f685c, type: 3}
-      propertyPath: fireExtinguisherThrust
-      value: 50
-      objectReference: {fileID: 0}
+      propertyPath: maskSpriteResolver
+      value: 
+      objectReference: {fileID: 1939284440}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
