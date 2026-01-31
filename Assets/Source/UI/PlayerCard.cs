@@ -12,12 +12,18 @@ public class PlayerCard : MonoBehaviour
     /// <summary>
     /// Event for Showing Pickup
     /// </summary>
-    public static Action<int, PowerupItem> OnActivatePickup;
-
-    public int PlayerId;
+    public static Action<int, PowerupItem> OnGetPickup;
+    
+    /// <summary>
+    /// Event for Showing Pickup
+    /// </summary>
+    public static Action<int> OnUsePickup;
+    
     
     
     public float HealthLossRate = 1.0f;
+    public Sprite defaultItemSprite;
+    public Sprite deadItemSprite;
     
     [SerializeField]
     private float maxHealth = 1;
@@ -30,37 +36,30 @@ public class PlayerCard : MonoBehaviour
     
     void OnEnable()
     {
-        OnOutOfBounds+=DepleteHealth;
-        OnActivatePickup+=HandlePickup;
-        
         currentHealth = maxHealth;
     }
 
     void OnDisable()
     {
-        OnOutOfBounds+=DepleteHealth;
-        OnActivatePickup+=HandlePickup;
     }
 
-    void DepleteHealth(int outOfBoundsPlayerId)
+    public void ShowHealth(float healthPercent)
     {
-        if (outOfBoundsPlayerId != PlayerId)
-        {
-            return;
-        }
-        
-        currentHealth -= Time.deltaTime * HealthLossRate;
-        playerIcon.fillAmount = currentHealth / maxHealth;
+        playerIcon.fillAmount = healthPercent;
     }
 
-    void HandlePickup(int pickupPlayerId, PowerupItem item)
+    public void HandlePickup(PowerupItem item)
     {
-        if (pickupPlayerId != PlayerId)
-        {
-            return;
-        }
-
         itemIcon.sprite = item.Icon.sprite;
+    }
+    
+    public void RemovePickup()
+    {
+        itemIcon.sprite = defaultItemSprite;
+    }
 
+    public void ShowDead()
+    {
+        itemIcon.sprite = deadItemSprite;
     }
 }

@@ -15,7 +15,7 @@ public class HealthTester : MonoBehaviour
     
     public void PickupItem()
     {
-        PlayerCard.OnActivatePickup(1, powerUp);
+        PlayerCard.OnGetPickup(1, powerUp);
         Debug.Log("Picked up");
     }
 
