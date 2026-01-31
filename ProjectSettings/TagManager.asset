@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - arena
+  - ItemSpawnPoint
   layers:
   - Default
   - TransparentFX
@@ -45,8 +46,14 @@ TagManager:
   - name: Background
     uniqueID: 3894325849
     locked: 0
+  - name: Pickups
+    uniqueID: 741057399
+    locked: 0
   - name: Player
     uniqueID: 3838376281
+    locked: 0
+  - name: Debug
+    uniqueID: 494317867
     locked: 0
   m_RenderingLayers:
   - Default
