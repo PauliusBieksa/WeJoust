@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     
     InputAction moveAction;
     InputAction lookAction;
-    InputAction attackAction;
+    InputAction useAction;
     Rigidbody2D rb;
     
     private bool losingHealth = false;
@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
         
         moveAction = GetComponent<PlayerInput>().actions.FindAction("Move");
         lookAction = GetComponent<PlayerInput>().actions.FindAction("Look");
-        attackAction = GetComponent<PlayerInput>().actions.FindAction("Jump");
+        useAction = GetComponent<PlayerInput>().actions.FindAction("Jump");
         rb = GetComponent<Rigidbody2D>();
 
         abilitiesScript = GetComponent<Abilities>();
@@ -97,6 +97,11 @@ public class Player : MonoBehaviour
             }
             rb.angularDamping = extraRotationDamping * (1f + facingDotProd);
             rb.AddTorque(torqueVal);
+        }
+
+        if (useAction.triggered)
+        {
+            abilitiesScript.UseItem();
         }
     }
 

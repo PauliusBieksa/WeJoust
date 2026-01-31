@@ -15,9 +15,15 @@ public class Abilities : MonoBehaviour
     float stationaryVelocity = 30f;
     [SerializeField]
     float stationaryMass = 10f;
+    [SerializeField]
+    float stationaryCooldown = 0.8f;
 
+    [SerializeField]
+    GameObject highlighterPrefab;
 
     float itemUsageRemaining = 0f;
+    float cooldown = 0f;
+    
     public MASKS currentMask = MASKS.NONE;
 
     public enum MASKS
@@ -39,6 +45,8 @@ public class Abilities : MonoBehaviour
     {
         if (currentMask != MASKS.NONE && itemUsageRemaining <= 0)
             currentMask = MASKS.NONE;
+        if (cooldown > 0)
+            cooldown -= Time.deltaTime;
     }
 
     public void equipMask(MASKS m)
@@ -63,7 +71,7 @@ public class Abilities : MonoBehaviour
                 useFireExtinguisher();
                 break;
             case MASKS.STATIONARY:
-                //
+                useStationary();
                 break;
         }
     }
@@ -77,6 +85,17 @@ public class Abilities : MonoBehaviour
 
     private void useStationary()
     {
+        if (cooldown <= 0)
+        {
+            GameObject hl = Instantiate(highlighterPrefab);
+            hl.transform.position = transform.rotation * playerScript.spritetBroomFacing + transform.position;
+            Rigidbody2D rb = hl.GetComponent<Rigidbody2D>();
+            rb.mass = stationaryMass;
+            rb.angularVelocity = Random.Range(0.2f, 5f);
+            rb.linearVelocity = transform.rotation * playerScript.spritetBroomFacing * stationaryVelocity;
 
+            itemUsageRemaining -= 1;
+            cooldown += stationaryCooldown;
+        }
     }
 }

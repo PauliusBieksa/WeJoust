@@ -80,7 +80,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 10
-  m_LinearDamping: 0
+  m_LinearDamping: 0.6
   m_AngularDamping: 0.3
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: e8bca86d6c18a5a4abef5190cac91a45, type: 2}
@@ -167,6 +167,8 @@ MonoBehaviour:
   stationaryCount: 5
   stationaryVelocity: 30
   stationaryMass: 10
+  stationaryCooldown: 0.8
+  highlighterPrefab: {fileID: 1022111957640332583, guid: 7a9187e48ea38814e8bcb5a4aa67faf0, type: 3}
   currentMask: 2
 --- !u!1 &2079650819483735061
 GameObject:
