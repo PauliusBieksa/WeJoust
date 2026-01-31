@@ -21,7 +21,7 @@ public class Abilities : MonoBehaviour
     [SerializeField]
     GameObject highlighterPrefab;
 
-    float itemUsageRemaining = 0f;
+    public float itemUsageRemaining = 0f;
     float cooldown = 0f;
     
     public MASKS currentMask = MASKS.NONE;
@@ -80,7 +80,9 @@ public class Abilities : MonoBehaviour
     private void useFireExtinguisher()
     {
         rb.AddForce(transform.rotation * playerScript.spritetBroomFacing * fireExtinguisherThrust);
+        
         itemUsageRemaining -= Time.deltaTime;
+        
     }
 
     private void useStationary()

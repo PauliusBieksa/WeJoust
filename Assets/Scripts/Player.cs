@@ -9,6 +9,9 @@ public class Player : MonoBehaviour
     public PlayerCard playerCard;
     public SpriteRenderer chair;
     
+    public SpriteRenderer extinguisher;
+    public ParticleSystem foam;
+    
     public float moveSpeed = 1f;
     public float rotattionSpeed = 1f;
     public Vector2 spritetBroomFacing = new Vector2(-1, 0);
@@ -100,9 +103,39 @@ public class Player : MonoBehaviour
             rb.AddTorque(torqueVal);
         }
 
+        ControlItemVisibility();
+
+
         if (useAction.IsPressed())
         {
             abilitiesScript.UseItem();
+            if (!foam.isPlaying && 
+                abilitiesScript.itemUsageRemaining > 0 &&
+                abilitiesScript.currentMask == Abilities.MASKS.FIRE_HELMET)
+            {
+                foam.Play();
+            }else
+            {
+                foam.Pause();
+            }
+            
+        }
+        else
+        {
+            foam.Pause();
+        }
+    }
+
+    private void ControlItemVisibility()
+    {
+        if (Abilities.MASKS.NONE != abilitiesScript.currentMask)
+        {
+            extinguisher.enabled = false;
+        }
+
+        if (Abilities.MASKS.FIRE_HELMET != abilitiesScript.currentMask)
+        {
+            extinguisher.enabled = true;
         }
     }
 
