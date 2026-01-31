@@ -5,8 +5,9 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    public int PlayerID {get; private set;}
+    public int playerID;
     public PlayerCard playerCard;
+    public SpriteRenderer chair;
     
     public float moveSpeed = 1f;
     public float rotattionSpeed = 1f;

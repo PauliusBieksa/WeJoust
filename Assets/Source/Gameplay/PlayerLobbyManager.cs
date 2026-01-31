@@ -29,7 +29,9 @@ public class PlayerLobbyManager : MonoBehaviour
       if(joinedPLayerCount < 4)
       {
          Players.Add(player);
-         ActivatePlayerCard(Players.Count - 1, player);
+         player.playerID =  joinedPLayerCount;
+         player.chair.color = colors[joinedPLayerCount] * 2;
+         ActivatePlayerCard(joinedPLayerCount, player);
          joinedPLayerCount++;
       }
       else
@@ -42,6 +44,7 @@ public class PlayerLobbyManager : MonoBehaviour
    {
       playerCards[index].gameObject.SetActive(true);
       player.playerCard = playerCards[index];
+      player.playerCard.borderImage.color = colors[joinedPLayerCount] * 2;
    }
 
 }
