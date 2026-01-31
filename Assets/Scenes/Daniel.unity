@@ -564,7 +564,7 @@ MonoBehaviour:
   m_JoinAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Join
       m_Type: 0
       m_ExpectedControlType: 
       m_Id: 086db64e-2ad2-4572-9b23-e31d77940d30
@@ -1294,6 +1294,14 @@ PrefabInstance:
     - target: {fileID: 1773366782566994172, guid: 4ab058d1da4e7d44d86c0c7c0e2f685c, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397891696946846232, guid: 4ab058d1da4e7d44d86c0c7c0e2f685c, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: Gamepad
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397891696946846232, guid: 4ab058d1da4e7d44d86c0c7c0e2f685c, type: 3}
+      propertyPath: m_NeverAutoSwitchControlSchemes
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5141417083561017856, guid: 4ab058d1da4e7d44d86c0c7c0e2f685c, type: 3}
       propertyPath: m_LocalPosition.x
