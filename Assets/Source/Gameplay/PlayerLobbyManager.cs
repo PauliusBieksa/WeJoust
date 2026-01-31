@@ -6,6 +6,9 @@ public class PlayerLobbyManager : MonoBehaviour
 {
    public static List<Player> Players =  new List<Player>();
    public List<PlayerCard> playerCards = new List<PlayerCard>();
+   public List<Color> colors = new List<Color>();
+   
+   
    public static Action<Player> RegisterPlayerEvent;
    public static Action<Player> UnregisterPlayerEvent;
    

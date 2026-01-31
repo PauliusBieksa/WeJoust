@@ -55,19 +55,6 @@ public class Abilities : MonoBehaviour
         }
     }
 
-    public void UseItem()
-    {
-        switch (currentMask)
-        {
-            case MASKS.FIRE_HELMET:
-                useFireExtinguisher();
-                break;
-            case MASKS.STATIONARY:
-                //
-                break;
-        }
-    }
-
     // Firefighter helmet
     private void useFireExtinguisher()
     {
