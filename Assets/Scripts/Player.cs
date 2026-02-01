@@ -44,10 +44,12 @@ public class Player : MonoBehaviour
 
     private Abilities abilitiesScript;
     private GameManager gmScript;
+    private float spawnTime;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        spawnTime = Time.unscaledTime;
         PlayerLobbyManager.RegisterPlayerEvent(this);
         
         moveAction = GetComponent<PlayerInput>().actions.FindAction("Move");
@@ -95,26 +97,31 @@ public class Player : MonoBehaviour
         {
             return;
         }
-        else if (readyState == ReadyState.WAITING)
+        else if (readyState == ReadyState.WAITING && Time.unscaledTime - spawnTime > 0.5f)
         {
-            if (readyAction.IsPressed())
+            if (readyAction.triggered == true)
             {
                 readyState = ReadyState.READY;
             }
         }
         else if (readyState == ReadyState.READY)
         {
-            if (readyAction.IsPressed())
+            if (readyAction.triggered == true)
             {
                 readyState = ReadyState.WAITING;
             }
         }
     }
     
+    
     // Update is called once per frame
     void Update()
     {
         HandleReadyUp();
+        if (readyState != ReadyState.PLAYING)
+        {
+            return;
+        }
         moveValue = moveAction.ReadValue<Vector2>();
         lookValue = lookAction.ReadValue<Vector2>();
         

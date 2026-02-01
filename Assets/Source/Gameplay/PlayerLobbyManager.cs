@@ -1,12 +1,14 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerLobbyManager : MonoBehaviour
 {
    public static List<Player> Players =  new List<Player>();
    public List<PlayerCard> playerCards = new List<PlayerCard>();
    public List<Color> colors = new List<Color>();
+   public PlayerInputManager playerInputManager;
    
    
    public static Action<Player> RegisterPlayerEvent;
@@ -25,7 +27,6 @@ public class PlayerLobbyManager : MonoBehaviour
    {
       if(playersJoining)
       {
-         Time.timeScale = 0;
          
          bool playersWaiting = false;
          foreach (Player player in Players)
@@ -41,7 +42,7 @@ public class PlayerLobbyManager : MonoBehaviour
             }
          }
 
-         if (!playersWaiting)
+         if (!playersWaiting && joinedPLayerCount > 1)
          {
             playersJoining = false;
          }
@@ -52,7 +53,8 @@ public class PlayerLobbyManager : MonoBehaviour
          {
             player.readyState = Player.ReadyState.PLAYING;
          }
-         Time.timeScale = 0;
+         Time.timeScale = 1;
+         playerInputManager.DisableJoining();
       }
    }
 
