@@ -300,6 +300,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameplayCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6395428890352519146, guid: fb4ba853cf1c5fa4188d8cdfb490950b, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6395428890352519146, guid: fb4ba853cf1c5fa4188d8cdfb490950b, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 3840
+      objectReference: {fileID: 0}
+    - target: {fileID: 6395428890352519146, guid: fb4ba853cf1c5fa4188d8cdfb490950b, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 2160
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

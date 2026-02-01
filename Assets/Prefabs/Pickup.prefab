@@ -83,15 +83,15 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 8269130238597165264, guid: fca7e3608abb29f48a62b09551fd8fe2, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10, y: 10}
+  m_Size: {x: 7.04, y: 7.67}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!114 &255703286972416233
 MonoBehaviour:
@@ -120,9 +120,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.2D.Animation.Runtime::UnityEngine.U2D.Animation.SpriteResolver
   m_CategoryHash: 0.014266819
-  m_labelHash: 7.986259e-33
+  m_labelHash: 6.890074e-20
   m_SpriteKey: 0
-  m_SpriteHash: 507731506
+  m_SpriteHash: 226154508
 --- !u!1 &7283201436159891637
 GameObject:
   m_ObjectHideFlags: 0
