@@ -5137,7 +5137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
   maskSpriteResolver: {fileID: 4491140638485973715}
-  fireExtinguisherThrust: 50
+  fireExtinguisherThrust: 35
   fireExtinguisherDuration: 3
   stationaryCount: 5
   stationaryVelocity: 30
