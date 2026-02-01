@@ -137,8 +137,8 @@ MonoBehaviour:
   iconSprites:
   - {fileID: 3295340838405179618, guid: d01f60554ddd0a342a15fdfff6d7b8f4, type: 3}
   - {fileID: 2725318834019672947, guid: 2fa98e1525a539b408b2eae8cfb90b20, type: 3}
-  - {fileID: 2396053175222256799, guid: ea228c2285082104c9f78beebc9c526c, type: 3}
   - {fileID: -5475588602276051327, guid: 331aabcbf0ad65548bfabbbbe6cf44fa, type: 3}
+  - {fileID: 2396053175222256799, guid: ea228c2285082104c9f78beebc9c526c, type: 3}
   - {fileID: -9181194562420095409, guid: a12b959e11a062046aa9ed8b71e55280, type: 3}
   maxHealth: 2
   playerIcon: {fileID: 1060254476572231787}
