@@ -12,6 +12,7 @@ public class PlayerLobbyManager : MonoBehaviour
    public List<Color> colors = new List<Color>();
    public PlayerInputManager playerInputManager;
    public Image WinScreen;
+   public Image StartScreen;
    
    
    public static Action<Player> RegisterPlayerEvent;
@@ -30,6 +31,11 @@ public class PlayerLobbyManager : MonoBehaviour
 
    private void Update()
    {
+      if (joinedPLayerCount > 0)
+      {
+         StartScreen.gameObject.SetActive(false);
+      }
+      
       LobbyJoining();
       Winner();
    }
@@ -98,6 +104,7 @@ public class PlayerLobbyManager : MonoBehaviour
          }
          Time.timeScale = 1;
          playerInputManager.DisableJoining();
+         
       }
    }
 
