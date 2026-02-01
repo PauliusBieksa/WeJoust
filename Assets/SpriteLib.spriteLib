@@ -29,9 +29,9 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 8269130238597165264, guid: fca7e3608abb29f48a62b09551fd8fe2, type: 3}
     - m_Name: LunchBox
       m_Hash: 941333716
-      m_Sprite: {fileID: -4068020431236922812, guid: f3bfc7e3e84624842a69b3200dd90a26, type: 3}
+      m_Sprite: {fileID: -5475588602276051327, guid: 331aabcbf0ad65548bfabbbbe6cf44fa, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: -4068020431236922812, guid: f3bfc7e3e84624842a69b3200dd90a26, type: 3}
+      m_SpriteOverride: {fileID: -5475588602276051327, guid: 331aabcbf0ad65548bfabbbbe6cf44fa, type: 3}
     - m_Name: None
       m_Hash: 530755569
       m_Sprite: {fileID: 0}
@@ -66,5 +66,5 @@ MonoBehaviour:
     m_FromMain: 0
     m_EntryOverrideCount: 4
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 639055448268238092
+  m_ModificationHash: 639055469615207502
   m_Version: 1
