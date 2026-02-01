@@ -32,19 +32,23 @@ public class Player : MonoBehaviour
     private Vector2 lookValue;
 
     private Abilities abilitiesScript;
+    private GameManager gmScript;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
         PlayerLobbyManager.RegisterPlayerEvent(this);
         
         moveAction = GetComponent<PlayerInput>().actions.FindAction("Move");
-        lookAction = GetComponent<PlayerInput>().actions.FindAction("Look");
+        lookAction = GetComponent<PlayerInput>().actions.FindAction("Move");
+        //lookAction = GetComponent<PlayerInput>().actions.FindAction("Look");
         useAction = GetComponent<PlayerInput>().actions.FindAction("Jump");
         rb = GetComponent<Rigidbody2D>();
 
         abilitiesScript = GetComponent<Abilities>();
+        gmScript = GameObject.Find("Game Manager").GetComponent<GameManager>();
+
+        transform.position = gmScript.GetSpawnPosition();
     }
 
 
