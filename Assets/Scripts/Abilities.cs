@@ -130,7 +130,7 @@ public class Abilities : MonoBehaviour
         {
             GameObject banana = Instantiate(bananaPrefab);
             banana.transform.position = transform.position;
-            Vector3 targetPos = transform.rotation * new Vector3(-playerScript.spritetBroomFacing.x * 5f, -playerScript.spritetBroomFacing.y * 5f) + transform.position;
+            Vector3 targetPos = (transform.rotation * new Vector3(-playerScript.spritetBroomFacing.x * 5f, -playerScript.spritetBroomFacing.y * 5f)) + transform.position;
             banana.GetComponent<Banana>().targetPos = targetPos;
 
             itemUsageRemaining -= 1;

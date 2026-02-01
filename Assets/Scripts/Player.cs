@@ -5,6 +5,16 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+
+    public enum ReadyState
+    {
+        WAITING,
+        READY,
+        PLAYING
+    }
+    
+    public ReadyState readyState = ReadyState.WAITING;
+    
     public int playerID;
     public PlayerCard playerCard;
     public SpriteRenderer chair;
@@ -21,6 +31,7 @@ public class Player : MonoBehaviour
     InputAction moveAction;
     InputAction lookAction;
     InputAction useAction;
+    InputAction readyAction;
     Rigidbody2D rb;
     
     private bool losingHealth = false;
@@ -33,21 +44,24 @@ public class Player : MonoBehaviour
 
     private Abilities abilitiesScript;
     private GameManager gmScript;
-
+    private float spawnTime;
     bool dead = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        spawnTime = Time.unscaledTime;
         PlayerLobbyManager.RegisterPlayerEvent(this);
         
         moveAction = GetComponent<PlayerInput>().actions.FindAction("Move");
         lookAction = GetComponent<PlayerInput>().actions.FindAction("Move");
         //lookAction = GetComponent<PlayerInput>().actions.FindAction("Look");
         useAction = GetComponent<PlayerInput>().actions.FindAction("Jump");
+        readyAction = GetComponent<PlayerInput>().actions.FindAction("Interact");
         rb = GetComponent<Rigidbody2D>();
 
         abilitiesScript = GetComponent<Abilities>();
+        abilitiesScript.currentMask = Abilities.MASKS.NONE;
         gmScript = GameObject.Find("Game Manager").GetComponent<GameManager>();
 
         transform.position = gmScript.GetSpawnPosition();
@@ -83,9 +97,38 @@ public class Player : MonoBehaviour
         }
     }
 
+
+    void HandleReadyUp()
+    {
+        if (readyState == ReadyState.PLAYING)
+        {
+            return;
+        }
+        else if (readyState == ReadyState.WAITING && Time.unscaledTime - spawnTime > 0.5f)
+        {
+            if (readyAction.triggered == true)
+            {
+                readyState = ReadyState.READY;
+            }
+        }
+        else if (readyState == ReadyState.READY)
+        {
+            if (readyAction.triggered == true)
+            {
+                readyState = ReadyState.WAITING;
+            }
+        }
+    }
+    
+    
     // Update is called once per frame
     void Update()
     {
+        HandleReadyUp();
+        if (readyState != ReadyState.PLAYING)
+        {
+            return;
+        }
         if (dead)
             return;
 
