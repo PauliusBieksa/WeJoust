@@ -4928,7 +4928,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1227320109327260225, guid: 06864d09b36e4d143904f8cbb47b8588, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4936,7 +4936,7 @@ SpriteRenderer:
   m_Size: {x: 2.39, y: 3.89}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!114 &9169646687702493569
 MonoBehaviour:
@@ -4967,7 +4967,7 @@ MonoBehaviour:
   m_CategoryHash: 0.014266819
   m_labelHash: 1.4380202e-36
   m_SpriteKey: 0
-  m_SpriteHash: 226154508
+  m_SpriteHash: 564897909
 --- !u!1 &1773366782566994172
 GameObject:
   m_ObjectHideFlags: 0
@@ -5088,6 +5088,7 @@ MonoBehaviour:
   extraRotationDamping: 4
   HealthLossRate: 1
   maxHealth: 2
+  dead: 0
 --- !u!70 &2047551467332050619
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
