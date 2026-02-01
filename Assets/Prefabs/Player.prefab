@@ -5076,6 +5076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf3bae1047ada149b881014a9424156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
+  readyState: 0
   playerID: 0
   playerCard: {fileID: 0}
   chair: {fileID: 420799065356256342}
@@ -5150,6 +5151,8 @@ MonoBehaviour:
   bananaPrefab: {fileID: 297240424433905405, guid: 84a26fa3b09a92045bbc1ee2be0b3292, type: 3}
   itemUsageRemaining: 0
   currentMask: 2
+  broomCol1: {fileID: 7137643459508239756}
+  broomCol2: {fileID: 1001783406152484783}
 --- !u!1 &2030501451562434494
 GameObject:
   m_ObjectHideFlags: 0
