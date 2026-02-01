@@ -20,10 +20,17 @@ public class Abilities : MonoBehaviour
     [SerializeField]
     float stationaryMass = 10f;
     [SerializeField]
-    float stationaryCooldown = 0.8f;
+    float stationaryCooldown = 0.6f;
+    [SerializeField]
+    float lunchBoxCooldown = 0.8f;
+    [SerializeField]
+    int lunchBoxbananas = 4;
+    public float bananaSpeedAdd = 10f;
 
     [SerializeField]
     GameObject highlighterPrefab;
+    [SerializeField]
+    GameObject bananaPrefab;
 
     public float itemUsageRemaining = 0f;
     float cooldown = 0f;
@@ -34,6 +41,7 @@ public class Abilities : MonoBehaviour
     {
         FIRE_HELMET,
         STATIONARY,
+        LUNCHBOX,
         NONE
     }
 
@@ -69,6 +77,10 @@ public class Abilities : MonoBehaviour
                 itemUsageRemaining = stationaryCount - 0.000001f;
                 maskSpriteResolver.SetCategoryAndLabel("Masks", "Stationary");
                 break;
+            case MASKS.LUNCHBOX:
+                itemUsageRemaining = lunchBoxbananas - 0.000001f;
+                maskSpriteResolver.SetCategoryAndLabel("Masks", "LunchBox");
+                break;
         }
     }
 
@@ -81,6 +93,9 @@ public class Abilities : MonoBehaviour
                 break;
             case MASKS.STATIONARY:
                 useStationary();
+                break;
+            case MASKS.LUNCHBOX:
+                useLunchBox();
                 break;
         }
     }
@@ -106,6 +121,20 @@ public class Abilities : MonoBehaviour
 
             itemUsageRemaining -= 1;
             cooldown += stationaryCooldown;
+        }
+    }
+
+    private void useLunchBox()
+    {
+        if (cooldown <= 0)
+        {
+            GameObject banana = Instantiate(bananaPrefab);
+            banana.transform.position = transform.position;
+            Vector3 targetPos = transform.rotation * new Vector3(-playerScript.spritetBroomFacing.x * 5f, -playerScript.spritetBroomFacing.y * 5f) + transform.position;
+            banana.GetComponent<Banana>().targetPos = targetPos;
+
+            itemUsageRemaining -= 1;
+            cooldown += lunchBoxCooldown;
         }
     }
 }

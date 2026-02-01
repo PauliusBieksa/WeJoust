@@ -8,7 +8,7 @@ public class PowerupItem : MonoBehaviour
     
     void Start()
     {
-        int choice = Random.Range(0, 2);
+        int choice = Random.Range(0, 3);
         SpriteResolver sprite_resolver = GetComponentInChildren<SpriteResolver>();
         switch (choice)
         {
@@ -16,10 +16,13 @@ public class PowerupItem : MonoBehaviour
                 Mask = Abilities.MASKS.FIRE_HELMET;
                 sprite_resolver.SetCategoryAndLabel("Masks", "FireExtinguisher");
                 break;
-
             case 1:
                 Mask = Abilities.MASKS.STATIONARY;
                 sprite_resolver.SetCategoryAndLabel("Masks", "Stationary");
+                break;
+            case 2:
+                Mask = Abilities.MASKS.LUNCHBOX;
+                sprite_resolver.SetCategoryAndLabel("Masks", "LunchBox");
                 break;
 
         }
