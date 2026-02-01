@@ -50,7 +50,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   MaskPrefab: {fileID: 7283201436159891637, guid: cde46bd19db6a8245ae789bb88215f02, type: 3}
-  spawnItem: 1
+  spawnItem: 0
+  itemSpawnTimer: 7
+  maxAvailableMasks: 3
 --- !u!114 &9178249089299123299
 MonoBehaviour:
   m_ObjectHideFlags: 0

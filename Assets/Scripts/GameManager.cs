@@ -11,6 +11,12 @@ public class GameManager : MonoBehaviour
 
     public bool spawnItem = false;
 
+    [SerializeField]
+    float itemSpawnTimer = 10f;
+    float timeToItem = 0f;
+    [SerializeField]
+    int maxAvailableMasks = 3;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,6 +32,8 @@ public class GameManager : MonoBehaviour
         {
             playerSpawnPointScripts.Add(playerSpawnPoints[i].GetComponent<PlayerSpawnPoint>());
         }
+
+        timeToItem = itemSpawnTimer;
     }
 
     // Update is called once per frame
@@ -40,10 +48,28 @@ public class GameManager : MonoBehaviour
             SpawnMask();
         }
         ///////////////////////////////////////////////////////////////////////////////////////////////////
+        ///
+        timeToItem -= Time.deltaTime;
+        if (timeToItem <= 0)
+        {
+            timeToItem = itemSpawnTimer;
+            SpawnMask();
+            SpawnMask();
+        }
     }
 
     private void SpawnMask()
     {
+        int spawned = 0;
+        for (int i = 0; i < maskSpawnPointScripts.Count; i++)
+        {
+            if (maskSpawnPointScripts[i].SpawnedMask != null)
+            {
+                spawned++;
+                if (spawned >= maxAvailableMasks)
+                    return;
+            }
+        }
         int index = Random.Range(0, maskSpawnPoints.Length);
         for (int i = 0; i < maskSpawnPointScripts.Count; i++)
         {
