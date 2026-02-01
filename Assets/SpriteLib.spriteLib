@@ -19,9 +19,9 @@ MonoBehaviour:
     m_OverrideEntries:
     - m_Name: FireExtinguisher
       m_Hash: 66366109
-      m_Sprite: {fileID: 1744921728391940866, guid: 594a905b56b8b254ba4e0c9c9391ce72, type: 3}
+      m_Sprite: {fileID: -1227320109327260225, guid: 06864d09b36e4d143904f8cbb47b8588, type: 3}
       m_FromMain: 0
-      m_SpriteOverride: {fileID: 1744921728391940866, guid: 594a905b56b8b254ba4e0c9c9391ce72, type: 3}
+      m_SpriteOverride: {fileID: -1227320109327260225, guid: 06864d09b36e4d143904f8cbb47b8588, type: 3}
     - m_Name: Stationary
       m_Hash: 170253884
       m_Sprite: {fileID: 8269130238597165264, guid: fca7e3608abb29f48a62b09551fd8fe2, type: 3}
@@ -61,5 +61,5 @@ MonoBehaviour:
     m_FromMain: 0
     m_EntryOverrideCount: 4
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 639055089206705196
+  m_ModificationHash: 639055373872067335
   m_Version: 1
