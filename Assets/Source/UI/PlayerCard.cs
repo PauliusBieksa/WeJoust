@@ -64,5 +64,6 @@ public class PlayerCard : MonoBehaviour
     public void ShowDead()
     {
         itemIcon.sprite = deadItemSprite;
+        itemIcon.fillAmount = 1;
     }
 }

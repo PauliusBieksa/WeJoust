@@ -5049,7 +5049,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 3
   m_LinearDamping: 0.6
   m_AngularDamping: 0.3
   m_GravityScale: 0
@@ -5062,7 +5062,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &6480630680335841245
 MonoBehaviour:
@@ -5137,7 +5137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Abilities
   maskSpriteResolver: {fileID: 4491140638485973715}
-  fireExtinguisherThrust: 50
+  fireExtinguisherThrust: 25
   fireExtinguisherDuration: 3
   stationaryCount: 5
   stationaryVelocity: 30
@@ -5656,7 +5656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7aee89d3fd93645b2e9b0cac26b180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Knockback
-  strength: 20
+  strength: 5
 --- !u!1 &7375316475146506633
 GameObject:
   m_ObjectHideFlags: 0
