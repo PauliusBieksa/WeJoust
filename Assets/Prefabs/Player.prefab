@@ -5087,7 +5087,7 @@ MonoBehaviour:
   spritetBroomFacing: {x: -1, y: 0}
   extraRotationDamping: 4
   HealthLossRate: 1
-  maxHealth: 2
+  maxHealth: 4
   dead: 0
 --- !u!70 &2047551467332050619
 CapsuleCollider2D:
