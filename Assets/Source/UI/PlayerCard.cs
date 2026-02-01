@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,13 +26,14 @@ public class PlayerCard : MonoBehaviour
     public Sprite defaultItemSprite;
     public Sprite deadItemSprite;
     public Image borderImage;
+    public Image itemIcon;
+    public List<Sprite> iconSprites;
+
     
     [SerializeField]
     private float maxHealth = 1;
     [SerializeField]
     private Image playerIcon;
-    [SerializeField]
-    private Image itemIcon;
     
     private float currentHealth = 1;
     

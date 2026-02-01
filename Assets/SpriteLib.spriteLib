@@ -34,6 +34,32 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 0}
     m_FromMain: 0
     m_EntryOverrideCount: 3
+  - m_Name: Icons
+    m_Hash: 195788666
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: FireExtinguisher
+      m_Hash: 66366109
+      m_Sprite: {fileID: 3295340838405179618, guid: d01f60554ddd0a342a15fdfff6d7b8f4, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 3295340838405179618, guid: d01f60554ddd0a342a15fdfff6d7b8f4, type: 3}
+    - m_Name: Stationary
+      m_Hash: 170253884
+      m_Sprite: {fileID: 2725318834019672947, guid: 2fa98e1525a539b408b2eae8cfb90b20, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2725318834019672947, guid: 2fa98e1525a539b408b2eae8cfb90b20, type: 3}
+    - m_Name: None
+      m_Hash: 530755569
+      m_Sprite: {fileID: 2396053175222256799, guid: ea228c2285082104c9f78beebc9c526c, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2396053175222256799, guid: ea228c2285082104c9f78beebc9c526c, type: 3}
+    - m_Name: Dead
+      m_Hash: 219670042
+      m_Sprite: {fileID: -9181194562420095409, guid: a12b959e11a062046aa9ed8b71e55280, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -9181194562420095409, guid: a12b959e11a062046aa9ed8b71e55280, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 4
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 639055047528230598
+  m_ModificationHash: 639055089206705196
   m_Version: 1
