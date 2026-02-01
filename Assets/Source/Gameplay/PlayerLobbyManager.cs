@@ -12,8 +12,8 @@ public class PlayerLobbyManager : MonoBehaviour
    public List<Color> colors = new List<Color>();
    public PlayerInputManager playerInputManager;
    public Image WinScreen;
+    InputAction interactAction;
    public Image StartScreen;
-   
    
    public static Action<Player> RegisterPlayerEvent;
    public static Action<Player> UnregisterPlayerEvent;
@@ -29,7 +29,13 @@ public class PlayerLobbyManager : MonoBehaviour
       Time.timeScale = 0;
    }
 
-   private void Update()
+    private void Start()
+    {
+
+        interactAction = InputSystem.actions.FindAction("Interact");
+    }
+
+    private void Update()
    {
       if (joinedPLayerCount > 0)
       {
@@ -67,6 +73,10 @@ public class PlayerLobbyManager : MonoBehaviour
                winner.playerCard.GetComponent<RectTransform>().anchoredPosition = new Vector2(1920, 1080);
                winner.playerCard.GetComponent<RectTransform>().position = new Vector2(0f, 0f);
             }
+         }
+         if (interactAction.triggered)
+         {
+                Restart();
          }
       }
    }
@@ -137,7 +147,7 @@ public class PlayerLobbyManager : MonoBehaviour
    }
    
    //restart
-   void OnAnyButton(InputControl control)
+   void Restart()
    {
       if(winner != null)
       {
