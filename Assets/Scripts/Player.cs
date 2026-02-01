@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
     private Abilities abilitiesScript;
     private GameManager gmScript;
     private float spawnTime;
-    bool dead = false;
+    public bool dead = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -130,7 +130,9 @@ public class Player : MonoBehaviour
             return;
         }
         if (dead)
+        {
             return;
+        }
 
         moveValue = moveAction.ReadValue<Vector2>();
         lookValue = lookAction.ReadValue<Vector2>();

@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 168467718877795913, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
+      propertyPath: playerInputManager
+      value: 
+      objectReference: {fileID: 710235822}
     - target: {fileID: 430271954337915593, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -176,6 +180,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
+--- !u!114 &710235822 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9178249089299123299, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
+  m_PrefabInstance: {fileID: 14276220}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInputManager
 --- !u!1001 &1093502390
 PrefabInstance:
   m_ObjectHideFlags: 0

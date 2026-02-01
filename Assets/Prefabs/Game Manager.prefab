@@ -120,6 +120,7 @@ MonoBehaviour:
   - {r: 1, g: 0.75686276, b: 0.02745098, a: 1}
   - {r: 0, g: 0.8862745, b: 0.73333335, a: 1}
   playerInputManager: {fileID: 9178249089299123299}
+  WinScreen: {fileID: 9166848396356395126}
 --- !u!1 &4069567005545596500
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,6 +304,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameplayCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5510192155184683543, guid: fb4ba853cf1c5fa4188d8cdfb490950b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.00012207031
+      objectReference: {fileID: 0}
+    - target: {fileID: 7162384297090361147, guid: fb4ba853cf1c5fa4188d8cdfb490950b, type: 3}
+      propertyPath: m_Name
+      value: WinScreen
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -357,6 +366,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 387e5dc5e797ae74f95ce60face01f3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCard
+--- !u!114 &9166848396356395126 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6484486495826559702, guid: fb4ba853cf1c5fa4188d8cdfb490950b, type: 3}
+  m_PrefabInstance: {fileID: 2795246702601298592}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1001 &8243912693867296830
 PrefabInstance:
   m_ObjectHideFlags: 0
