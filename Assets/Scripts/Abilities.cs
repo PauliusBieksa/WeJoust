@@ -37,6 +37,11 @@ public class Abilities : MonoBehaviour
     
     public MASKS currentMask = MASKS.NONE;
 
+    [SerializeField]
+    BoxCollider2D broomCol1;
+    [SerializeField]
+    BoxCollider2D broomCol2;
+
     public enum MASKS
     {
         FIRE_HELMET,
@@ -114,6 +119,8 @@ public class Abilities : MonoBehaviour
         {
             GameObject hl = Instantiate(highlighterPrefab);
             hl.transform.position = transform.rotation * playerScript.spritetBroomFacing + transform.position;
+            Physics2D.IgnoreCollision(hl.GetComponent<CapsuleCollider2D>(), broomCol1);
+            Physics2D.IgnoreCollision(hl.GetComponent<CapsuleCollider2D>(), broomCol2);
             Rigidbody2D rb = hl.GetComponent<Rigidbody2D>();
             rb.mass = stationaryMass;
             rb.angularVelocity = Random.Range(0.2f, 5f);
