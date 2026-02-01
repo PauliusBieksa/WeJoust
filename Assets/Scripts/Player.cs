@@ -34,6 +34,8 @@ public class Player : MonoBehaviour
     private Abilities abilitiesScript;
     private GameManager gmScript;
 
+    bool dead = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -74,11 +76,19 @@ public class Player : MonoBehaviour
                 Destroy(other.gameObject);
             }
         }
+        else if (other.gameObject.tag == "Banana")
+        {
+            rb.linearVelocity = rb.linearVelocity + rb.linearVelocity.normalized * abilitiesScript.bananaSpeedAdd;
+            Destroy(other.gameObject);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (dead)
+            return;
+
         moveValue = moveAction.ReadValue<Vector2>();
         lookValue = lookAction.ReadValue<Vector2>();
         
@@ -144,7 +154,7 @@ public class Player : MonoBehaviour
         {
             extinguisher.enabled = true;
             playerCard.itemIcon.fillAmount = abilitiesScript.itemUsageRemaining/abilitiesScript.fireExtinguisherDuration;
-            print($"fill {playerCard.itemIcon.gameObject.name} {abilitiesScript.itemUsageRemaining/abilitiesScript.fireExtinguisherDuration}");
+            //print($"fill {playerCard.itemIcon.gameObject.name} {abilitiesScript.itemUsageRemaining/abilitiesScript.fireExtinguisherDuration}");
         }
         else
         {
@@ -162,6 +172,7 @@ public class Player : MonoBehaviour
         { 
             // /PlayerLobbyManager.UnregisterPlayerEvent(this);
             playerCard.ShowDead();
+            dead = true;
             Destroy(this.gameObject);
         }
     }
