@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 5b2f92b9f4a75144199e735a6f75c71b
+guid: 8f56701a6c595d14f9e71ed85691b1b6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4016740336031217436
-    second: player_portrait_character_0
+      213: -1735137823859711018
+    second: waiting_placeholder_0
+  - first:
+      213: -6486151537900214894
+    second: waiting_placeholder_1
+  - first:
+      213: -6794908467401938449
+    second: waiting_placeholder_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_portrait_character_0
+      name: waiting_placeholder_0
       rect:
         serializedVersion: 2
-        x: 114
-        y: 0
-        width: 672
-        height: 744
+        x: 16
+        y: 11
+        width: 645
+        height: 653
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c17bf14dd045eb730800000000000000
-      internalID: 4016740336031217436
+      spriteID: 6d36f74a75d8be7e0800000000000000
+      internalID: -1735137823859711018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waiting_placeholder_1
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 662
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 295aa189a8f8cf5a0800000000000000
+      internalID: -6486151537900214894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waiting_placeholder_2
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1
+        width: 48
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe9a637ffb2a3b1a0800000000000000
+      internalID: -6794908467401938449
       vertices: []
       indices: 
       edges: []
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      player_portrait_character_0: 4016740336031217436
+      waiting_placeholder_0: -1735137823859711018
+      waiting_placeholder_1: -6486151537900214894
+      waiting_placeholder_2: -6794908467401938449
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
