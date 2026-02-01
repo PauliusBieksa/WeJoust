@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 5b2f92b9f4a75144199e735a6f75c71b
+guid: bfbafe2505acd5d43a4b12b8ed95027d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4016740336031217436
-    second: player_portrait_character_0
+      213: 1711104359173191777
+    second: ready_placeholder_0
+  - first:
+      213: -7258294843300902936
+    second: ready_placeholder_1
+  - first:
+      213: -9066108247877440337
+    second: ready_placeholder_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_portrait_character_0
+      name: ready_placeholder_0
       rect:
         serializedVersion: 2
-        x: 114
-        y: 0
-        width: 672
-        height: 744
+        x: 14
+        y: 11
+        width: 646
+        height: 654
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c17bf14dd045eb730800000000000000
-      internalID: 4016740336031217436
+      spriteID: 168f32e49501fb710800000000000000
+      internalID: 1711104359173191777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready_placeholder_1
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 437
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e7000ecb4b554b90800000000000000
+      internalID: -7258294843300902936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ready_placeholder_2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faca6063596be2280800000000000000
+      internalID: -9066108247877440337
       vertices: []
       indices: 
       edges: []
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      player_portrait_character_0: 4016740336031217436
+      ready_placeholder_0: 1711104359173191777
+      ready_placeholder_1: -7258294843300902936
+      ready_placeholder_2: -9066108247877440337
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
