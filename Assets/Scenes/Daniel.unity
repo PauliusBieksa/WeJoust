@@ -167,57 +167,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2244576161308807581, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3157610127688312358, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3157610127688312358, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -400641447
-      objectReference: {fileID: 0}
-    - target: {fileID: 3212259635581603025, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3370865136693818807, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3702433861251253021, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
       propertyPath: m_Name
       value: Game Manager
-      objectReference: {fileID: 0}
-    - target: {fileID: 3702433861251253021, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4069567005545596500, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5722512356114118885, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5722512356114118885, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5722512356114118885, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -400641447
-      objectReference: {fileID: 0}
-    - target: {fileID: 5956954595544308978, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6167964899609217453, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
-      propertyPath: m_Layer
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -5050,7 +5050,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 3
-  m_LinearDamping: 0.6
+  m_LinearDamping: 0.3
   m_AngularDamping: 0.3
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: e8bca86d6c18a5a4abef5190cac91a45, type: 2}
@@ -5086,7 +5086,7 @@ MonoBehaviour:
   spritetBroomFacing: {x: -1, y: 0}
   extraRotationDamping: 4
   HealthLossRate: 1
-  maxHealth: 1
+  maxHealth: 2
 --- !u!70 &2047551467332050619
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

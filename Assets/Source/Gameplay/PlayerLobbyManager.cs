@@ -13,12 +13,49 @@ public class PlayerLobbyManager : MonoBehaviour
    public static Action<Player> UnregisterPlayerEvent;
    
    private int joinedPLayerCount = 0;
+   private bool playersJoining = true;
 
    private void OnEnable()
    {
       RegisterPlayerEvent+=RegisterPlayer;
+      Time.timeScale = 0;
    }
-   
+
+   private void Update()
+   {
+      if(playersJoining)
+      {
+         Time.timeScale = 0;
+         
+         bool playersWaiting = false;
+         foreach (Player player in Players)
+         {
+            if (player.readyState == Player.ReadyState.WAITING)
+            {
+               playersWaiting = true;
+               player.playerCard.itemIcon.sprite = player.playerCard.waitingSprite;
+            }
+            else if (player.readyState == Player.ReadyState.READY)
+            {
+               player.playerCard.itemIcon.sprite = player.playerCard.readySprite;
+            }
+         }
+
+         if (!playersWaiting)
+         {
+            playersJoining = false;
+         }
+      }
+      else
+      {
+         foreach (Player player in Players)
+         {
+            player.readyState = Player.ReadyState.PLAYING;
+         }
+         Time.timeScale = 0;
+      }
+   }
+
    private void OnDisable()
    {
       RegisterPlayerEvent-=RegisterPlayer;
