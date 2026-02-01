@@ -1235,6 +1235,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 168467718877795913, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
+      propertyPath: WinScreen
+      value: 
+      objectReference: {fileID: 4451842252639990582}
     - target: {fileID: 430271954337915593, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1275,15 +1279,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2244576161308807581, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3702433861251253021, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
       propertyPath: m_Name
       value: Game Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5021320624736945563, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
+      propertyPath: m_Name
+      value: WinScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688370803528480951, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.00012207031
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
+--- !u!114 &4451842252639990582 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9166848396356395126, guid: b6c8905b7356b9141be5bd10088d4a9c, type: 3}
+  m_PrefabInstance: {fileID: 4451842252639990581}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
