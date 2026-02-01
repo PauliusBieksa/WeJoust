@@ -48,6 +48,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         abilitiesScript = GetComponent<Abilities>();
+        abilitiesScript.currentMask = Abilities.MASKS.NONE;
         gmScript = GameObject.Find("Game Manager").GetComponent<GameManager>();
 
         transform.position = gmScript.GetSpawnPosition();
