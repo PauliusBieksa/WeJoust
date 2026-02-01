@@ -4812,7 +4812,7 @@ ParticleSystemRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 741057399
   m_SortingLayer: 2
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_MaskInteraction: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -5143,7 +5143,11 @@ MonoBehaviour:
   stationaryVelocity: 30
   stationaryMass: 10
   stationaryCooldown: 0.8
+  lunchBoxCooldown: 0.8
+  lunchBoxbananas: 4
+  bananaSpeedAdd: 10
   highlighterPrefab: {fileID: 1022111957640332583, guid: 7a9187e48ea38814e8bcb5a4aa67faf0, type: 3}
+  bananaPrefab: {fileID: 297240424433905405, guid: 84a26fa3b09a92045bbc1ee2be0b3292, type: 3}
   itemUsageRemaining: 0
   currentMask: 2
 --- !u!1 &2030501451562434494
