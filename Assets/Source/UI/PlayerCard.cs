@@ -28,6 +28,7 @@ public class PlayerCard : MonoBehaviour
     public Sprite waitingSprite;
     public Sprite readySprite;
     public Image borderImage;
+    public Image backgroundImage;
     public Image itemIcon;
     public List<Sprite> iconSprites;
 

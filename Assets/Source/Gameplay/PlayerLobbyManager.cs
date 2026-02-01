@@ -126,7 +126,7 @@ public class PlayerLobbyManager : MonoBehaviour
    {
       playerCards[index].gameObject.SetActive(true);
       player.playerCard = playerCards[index];
-      player.playerCard.borderImage.color = colors[joinedPLayerCount] * 2;
+      player.playerCard.backgroundImage.color = colors[joinedPLayerCount] * 2;
    }
    
    //restart
