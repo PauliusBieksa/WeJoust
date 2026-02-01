@@ -194,8 +194,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -400641447
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -50265586523809732, guid: 2c3b1efda82ca7f4b96b4a132a78e875, type: 3}
@@ -299,18 +299,6 @@ PrefabInstance:
     - target: {fileID: 2188490203172770910, guid: fb4ba853cf1c5fa4188d8cdfb490950b, type: 3}
       propertyPath: m_Name
       value: GameplayCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6395428890352519146, guid: fb4ba853cf1c5fa4188d8cdfb490950b, type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6395428890352519146, guid: fb4ba853cf1c5fa4188d8cdfb490950b, type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 3840
-      objectReference: {fileID: 0}
-    - target: {fileID: 6395428890352519146, guid: fb4ba853cf1c5fa4188d8cdfb490950b, type: 3}
-      propertyPath: m_ReferenceResolution.y
-      value: 2160
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2562,6 +2550,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -4935735597811571720, guid: b4a1befd71bc2724d969401a0bb5aa8e, type: 3}
+    - target: {fileID: 4396129244375941339, guid: 381b29881e70f1b40bada20cc24bce46, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
