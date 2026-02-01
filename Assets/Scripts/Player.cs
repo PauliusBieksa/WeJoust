@@ -75,11 +75,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(losingHealth)
-        {
-            EvaluateHealth();
-        }
-        
         moveValue = moveAction.ReadValue<Vector2>();
         lookValue = lookAction.ReadValue<Vector2>();
         
@@ -123,18 +118,33 @@ public class Player : MonoBehaviour
         {
             foam.Stop();
         }
+        
+        if(losingHealth)
+        {
+            EvaluateHealth();
+        }
     }
 
     private void ControlItemVisibility()
     {
-        if (Abilities.MASKS.NONE != abilitiesScript.currentMask)
+        
+        
+        playerCard.itemIcon.sprite = playerCard.iconSprites[(int)abilitiesScript.currentMask];
+        
+        if (Abilities.MASKS.NONE == abilitiesScript.currentMask)
         {
             extinguisher.enabled = false;
         }
 
-        if (Abilities.MASKS.FIRE_HELMET != abilitiesScript.currentMask)
+        if (Abilities.MASKS.FIRE_HELMET == abilitiesScript.currentMask)
         {
             extinguisher.enabled = true;
+            playerCard.itemIcon.fillAmount = abilitiesScript.itemUsageRemaining/abilitiesScript.fireExtinguisherDuration;
+            print($"fill {playerCard.itemIcon.gameObject.name} {abilitiesScript.itemUsageRemaining/abilitiesScript.fireExtinguisherDuration}");
+        }
+        else
+        {
+            playerCard.itemIcon.fillAmount = 1;
         }
     }
 

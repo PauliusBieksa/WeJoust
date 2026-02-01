@@ -12,7 +12,7 @@ public class Abilities : MonoBehaviour
     [SerializeField]
     float fireExtinguisherThrust = 50f;
     [SerializeField]
-    float fireExtinguisherDuration = 3f;
+    public float fireExtinguisherDuration = 3f;
     [SerializeField]
     int stationaryCount = 5;
     [SerializeField]
@@ -90,6 +90,7 @@ public class Abilities : MonoBehaviour
     {
         rb.AddForce(transform.rotation * playerScript.spritetBroomFacing * fireExtinguisherThrust);
         itemUsageRemaining -= Time.deltaTime;
+        
     }
 
     private void useStationary()

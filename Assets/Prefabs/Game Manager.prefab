@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   MaskPrefab: {fileID: 7283201436159891637, guid: cde46bd19db6a8245ae789bb88215f02, type: 3}
-  spawnItem: 0
+  spawnItem: 1
 --- !u!114 &9178249089299123299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,8 +194,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -400641447
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -50265586523809732, guid: 2c3b1efda82ca7f4b96b4a132a78e875, type: 3}
@@ -2550,6 +2550,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -4935735597811571720, guid: b4a1befd71bc2724d969401a0bb5aa8e, type: 3}
+    - target: {fileID: 4396129244375941339, guid: 381b29881e70f1b40bada20cc24bce46, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
